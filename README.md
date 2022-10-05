@@ -1,9 +1,11 @@
-# 2023trainingrep
+# 2023 Training Plan
+
+This is our current plan for teaching programming/electronics, represented in dependency chart form.
 
 ```mermaid
-flowchart TB;
+flowchart LR;
 
-A[Basics of C++]
+A[/Basics of C++/]
 B[VSCode w/ WPILIB]; A --> B
 C[Commands/Subsystems]; B --> C
 D[Robot/RobotContainer/RobotMap]; B --> D
@@ -12,7 +14,7 @@ G[InstantCommands]; E --> G
 H[RunCommands]; E --> H
 F[Default Commands]; H --> F
 
-I(Basics of Electronics)
+I[/Basics of Electronics/]
 L[Limit Switches]; I ---> L
 O[Other Sensors]; L --> O
 P[Encoders]; Q --> P
@@ -22,11 +24,12 @@ J(Map Talons); I ---> J
 Q[Talons in Code]; J --> Q; L --> Q
 K(Update Talons); J --> K
 
-i(Driver Station)
+i[/Driver Station/]
 M(Check Controllers); i --> M
 N(Start Tele-op); i --> N
 Y(Start Auto); N --> Y
 Z(Find Logs); i --> Z
+W(Flash Radio); i --> W
 
 a[Limelight]; C ---> a
 g>AprilTags]; a --> g
@@ -38,7 +41,6 @@ U[Auto File]; S --> U
 e[Pneumatics]
 V>Program 2018 Robot]; e --> V; G ----> V; F ----> V; Q ----> V; N ------> V
 
-W(Flash Radio)
 X>Autonomous]; D ---> X; G ---> X; P ---> X; Y -----> X
 
 b[Config System]; T ----> b
@@ -47,5 +49,15 @@ d>Swerve]; b --> d; c --> d; R -----> d; V ---> d
 
 f>Shoot While Moving]; R -----> f; a -------> f
 h>Custom Dashboard]; i ----------> h
+```
+
+## Legend
+
+```mermaid
+flowchart LR;
+
+aa[/Start Point/] --> bb[Code Stuff] --> cc(Not Code Stuff) --> dd>Goal]
+
+A -->|Dependency| B
 
 ```
