@@ -1,6 +1,6 @@
 # 2023 Training Plan
 
-This is our current plan for teaching programming/electronics, represented in dependency chart form.
+This is our current teaching plan for programming/electronics, as a dependency chart.
 
 ```mermaid
 flowchart LR;
@@ -15,39 +15,40 @@ H[RunCommands]; E --> H
 F[Default Commands]; H --> F
 
 I[/Basics of Electronics/]
-L[Limit Switches]; I ---> L
-O[Other Sensors]; L --> O
+L(Limit Switches); I --> L
+O(Other Sensors); L --> O
 P[Encoders]; Q --> P
+j[PID Loops]; P --> j
 R["AHRS (NavX)"]; P --> R
+k(RoboRIO); I --> k
 
-J(Map Talons); I ---> J
+J(Talons); I --> J
 Q[Talons in Code]; J --> Q; L --> Q
-K(Update Talons); J --> K
+K(Phoenix Tuner); J --> K
 
 i[/Driver Station/]
 M(Check Controllers); i --> M
 N(Start Tele-op); i --> N
 Y(Start Auto); N --> Y
 Z(Find Logs); i --> Z
-W(Flash Radio); i --> W
+W(Flash Radio); i ----> W
 
 a[Limelight]; C ---> a
 g>AprilTags]; a --> g
 
-S(Filezilla)
-T[Config File]; S --> T
-U[Auto File]; S --> U
+T[Config File]; k --> T
+U[Auto File]; k --> U
 
 e[Pneumatics]
-V>Program 2018 Robot]; e --> V; G ----> V; F ----> V; Q ----> V; N ------> V
+V>Program 2018 Robot]; e --> V; G -----> V; F ----> V; Q ------> V; N ------> V
 
-X>Autonomous]; D ---> X; G ---> X; P ---> X; Y -----> X
+X>Autonomous]; D ---> X; G ----> X; j ---> X; Y -----> X
 
-b[Config System]; T ----> b
-c[Auto System]; U ----> c; D --------> c; X --> c
-d>Swerve]; b --> d; c --> d; R -----> d; V ---> d
+b[Config System]; T -------> b
+c[Auto System]; U -------> c; D --------> c; X --> c
+d>Swerve]; b --> d; c --> d; j ------> d; R ------> d; V ---> d
 
-f>Shoot While Moving]; R -----> f; a -------> f
+f>Shoot While Moving]; R ------> f; a -------> f
 h>Custom Dashboard]; i ----------> h
 ```
 
@@ -56,8 +57,6 @@ h>Custom Dashboard]; i ----------> h
 ```mermaid
 flowchart LR;
 
-aa[/Start Point/] --> bb[Code Stuff] --> cc(Not Code Stuff) --> dd>Goal]
-
-A -->|Dependency| B
+A[/Start Point/] -->|Dependency| B[Code Stuff] --> C(Not Code Stuff) --> D>Goal]
 
 ```
