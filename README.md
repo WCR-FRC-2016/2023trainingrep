@@ -5,6 +5,8 @@ This is our current teaching plan for programming/electronics, as a dependency c
 ```mermaid
 flowchart LR;
 
+classDef finished stroke:#0f0
+
 A[/Basics of C++/]
 B[VSCode w/ WPILIB]; A --> B
 C[Commands/Subsystems]; B --> C
@@ -30,7 +32,7 @@ i[/Driver Station/]
 M(Check Controllers); i --> M
 N(Start Tele-op); i --> N
 Y(Start Auto); N --> Y
-Z(Find Logs); i --> Z
+Z(Check Logs); i --> Z
 W(Flash Radio); i ----> W
 
 a[Limelight]; C ---> a
@@ -58,5 +60,4 @@ h>Custom Dashboard]; i ----------> h
 flowchart LR;
 
 A[/Start Point/] -->|Dependency| B[Code Stuff] --> C(Not Code Stuff) --> D>Goal]
-
 ```
