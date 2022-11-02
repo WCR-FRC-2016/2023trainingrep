@@ -61,3 +61,23 @@ flowchart LR;
 
 A[/Start Point/] -->|Dependency| B[Code Stuff] --> C(Not Code Stuff) --> D>Goal]
 ```
+
+## Basics of C++
+
+```mermaid
+flowchart LR;
+
+G[Types]
+A[Variables]; G-->A
+M[Operators]
+B[Expressions]; A-->B; M-->B
+K[If Statements]; B-->K
+C[While Loops]; B-->C
+D[For Loops]; C-->D
+H[Arrays]; A-->H
+I[Foreach Loops]; C-->I; H-->I 
+E[Functions]; B--->E
+F[Classes]; A----->F; E--->F; G------>F
+J[Header Files]
+L[Anonymous Functions]; E---->L
+```
