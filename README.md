@@ -30,7 +30,7 @@ K(Phoenix Tuner); J --> K
 
 i[/Driver Station/]
 M(Check Controllers); i --> M
-N(Start Tele-op); i --> N
+N(Start Tele-op); M --> N
 Y(Start Auto); N --> Y
 Z(Check Logs); i --> Z
 W(Flash Radio); i ----> W
@@ -42,9 +42,9 @@ T[Config File]; k --> T
 U[Auto File]; k --> U
 
 e[Pneumatics]
-V>Program 2018 Robot]; e --> V; G -----> V; F ----> V; Q ------> V; N ------> V
+V>Program 2018 Robot]; e --> V; G -----> V; F ----> V; Q ------> V; N -----> V
 
-X>Autonomous]; D ---> X; G ----> X; j ---> X; Y -----> X
+X>Autonomous]; D ---> X; G ----> X; j ---> X; Y ----> X
 
 b[Config System]; T -------> b
 c[Auto System]; U -------> c; D --------> c; X --> c
